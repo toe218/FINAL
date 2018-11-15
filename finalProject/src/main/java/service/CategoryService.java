@@ -9,27 +9,27 @@ import org.springframework.ui.Model;
 import model.City;
 import model.Continent;
 import model.Country;
-import repository.cartegoryRepository;
+import repository.CategoryRepository;
 
 @Service
-public class CartegoryService {
+public class CategoryService {
 	@Autowired
 	CategoryRepository categoryRepository;
 	
 	public void continentSelect(Model model) {
 		System.out.println("service1 ");
-		List<Continent> list = cartegoryRepository.continentSelect();
+		List<Continent> list = categoryRepository.continentSelect();
 		model.addAttribute("list", list);
 	}
 	public void countrySelect(Continent continent, Model model) {
 		System.out.println("service2 " + continent.getContinentName());
-		List<Country> list = cartegoryRepository.countrySelect(continent);
+		List<Country> list = categoryRepository.countrySelect(continent);
 		model.addAttribute("list", list);
 	}
 	public void citySelect(Country country, Model model) {
 		System.out.println("service3 " + country.getCountryNum());
 		System.out.println("service3 " + country.getCountryName());
-		List<City> list = cartegoryRepository.citySelect(country);
+		List<City> list = categoryRepository.citySelect(country);
 		model.addAttribute("list", list);
 	}
 }

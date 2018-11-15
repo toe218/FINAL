@@ -17,20 +17,20 @@ public class CategoryController {
 	@RequestMapping(value="/continent", method=RequestMethod.GET)
 	public String continent(Model model) {
 		System.out.println("controller1");
-		cartegoryService.continentSelect(model);
+		categoryService.continentSelect(model);
 		return "cartegory/continent";
 	}
 	@RequestMapping(value="/country", method=RequestMethod.POST)
 	public String country(Continent continent, Model model){
 		System.out.println("controller2 "+continent.getContinentName());
-		cartegoryService.countrySelect(continent, model);
+		categoryService.countrySelect(continent, model);
 		return "cartegory/country";
 	}
 	@RequestMapping(value="/city", method=RequestMethod.POST)
 	public String city(Country country, Model model) {
 		System.out.println("controller3 "+country.getCountryNum());
 		System.out.println("controller3 "+country.getCountryName());
-		cartegoryService.citySelect(country, model);
+		categoryService.citySelect(country, model);
 		return "cartegory/city";
 	}
 }

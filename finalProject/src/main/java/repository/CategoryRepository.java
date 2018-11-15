@@ -10,10 +10,10 @@ import model.Continent;
 import model.Country;
 
 @Repository
-public class cartegoryRepository extends AbstractRepository{
+public class CategoryRepository extends AbstractRepository{
 	private final String namespace = "repository.mapper.CategoryMapper";
 
-	public static List<Continent> continentSelect() {
+	public List<Continent> continentSelect() {
 		SqlSession sqlSession =
 				getSqlSessionFactory().openSession();
 		String statement =
@@ -25,7 +25,7 @@ public class cartegoryRepository extends AbstractRepository{
 		}
 	}
 
-	public static List<Country> countrySelect(Continent continent) {
+	public List<Country> countrySelect(Continent continent) {
 		SqlSession sqlSession = getSqlSessionFactory().openSession();
 		String statement = namespace + ".countrySelect";
 		try {
@@ -35,7 +35,7 @@ public class cartegoryRepository extends AbstractRepository{
 		}
 	}
 
-	public static List<City> citySelect(Country country) {
+	public List<City> citySelect(Country country) {
 		SqlSession sqlSession = getSqlSessionFactory().openSession();
 		String statement = namespace + ".citySelect";
 		try {
