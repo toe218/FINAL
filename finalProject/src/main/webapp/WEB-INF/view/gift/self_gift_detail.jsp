@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-자유여행 메인입니다 이걸 또쓰네
+		특산품 상세 페이지
 </body>
 </html>

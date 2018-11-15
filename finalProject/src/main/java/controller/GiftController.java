@@ -6,26 +6,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-public class MemberController {
+public class GiftController {
 
-	@RequestMapping(value = "/pkgmain", method = RequestMethod.GET)
+	@RequestMapping(value = "/self_gift_list", method = RequestMethod.GET)
 	public String handleStep1(Model model) {
-		return "pkg/pkgmain";
+		return "gift/self_gift_list";
 
 	}
-
-	@RequestMapping(value = "/map", method = RequestMethod.GET)
+	@RequestMapping(value = "/self_gift_detail", method = RequestMethod.GET)
 	public String handleStep2(Model model) {
-		return "map";
-
-	}
-
-	@RequestMapping(value = "/login", method = RequestMethod.GET)
-	public String handleStep3(Model model) {
-		return "member/login";
+		return "gift/self_gift_detail";
 
 	}
 	
-
-
 }

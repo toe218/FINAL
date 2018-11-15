@@ -9,5 +9,6 @@
 	<bean class="controller.BoardController" />
 	<bean class="controller.MainController" />
 	<bean class="controller.StaffController" />
+	<bean class="controller.GiftController"/>
 	
 </beans>
