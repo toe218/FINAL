@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+	회사 소개페이지입니다.
 </body>
 </html>
