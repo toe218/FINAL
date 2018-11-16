@@ -15,6 +15,7 @@
 			classpath:applicationController.xml
 			classpath:applicationContext.xml
 			classpath:applicationBoard.xml
+			classpath:applicationController2222.xml
 		</param-value>
 		</init-param>
 		<load-on-startup>1</load-on-startup>
