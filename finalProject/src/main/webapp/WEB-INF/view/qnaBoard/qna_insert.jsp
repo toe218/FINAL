@@ -34,24 +34,12 @@
 <!-- Custom styles for this template -->
 <link href="http://localhost:8080/finalProject/css/scrolling-nav.css"
 	rel="stylesheet">
-
-<script type="text/css">
-	.table {
-  table-layout:fixed;
-}
-
-.table td {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-</script>
 </head>
-<body id="page-top">
+<body>
 	<section id="services" class="bg-light">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-lg-6 mx-auto">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-6 mx-auto">
 				<table class="table table-bordered">
 					<thead>
 						<h2>질문글쓰기</h2>
@@ -79,12 +67,14 @@
 								<td><form:password path="qnaPw" /></td>
 							</tr>
 							<tr>
-								<td colspan="2"><input type="submit" value="등록" /> <a href="qna_list"><input type="button" value="글 목록" /></a></td>
+								<td colspan="2"><input type="submit" value="등록" /> <a
+									href="qna_list"><input type="button" value="글 목록" /></a></td>
 							</tr>
 						</form:form>
 				</table>
 			</div>
-			</div>
+		</div>
+	</div>
 	</section>
 </body>
 

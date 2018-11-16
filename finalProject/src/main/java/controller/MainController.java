@@ -15,9 +15,11 @@ public class MainController {
 	public String selfMain(Model model) {
 		return "self/selfMain";
 	}
-	@RequestMapping(value = "/mainpage", method = RequestMethod.GET)
-	public String mainpage(Model model) {
-		return "include_main/main";
+	
+	@RequestMapping(value = "/login", method = RequestMethod.GET)
+	public String login(Model model) {
+		model.addAttribute("bodyPage", "login.jsp");
+		return "main";
 	}
 
 }
