@@ -15,16 +15,9 @@ public class MainController {
 	public String selfMain(Model model) {
 		return "self/selfMain";
 	}
-	
-	//메인페이지로 이동
 	@RequestMapping(value = "/mainpage", method = RequestMethod.GET)
 	public String mainpage(Model model) {
 		return "include_main/main";
 	}
-	
-	//회사 소개 페이지로 이동
-	@RequestMapping(value = "/company_info", method = RequestMethod.GET)
-	public String company(Model model) {
-		return "introPage/introPage";
-	}
+
 }

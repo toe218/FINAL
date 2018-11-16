@@ -82,7 +82,7 @@
 						src="/finalProject/gift/images/gift_banana.jpg" alt=""></a>
 					<div class="card-body">
 						<h4 class="card-title">
-							<a href="self_gift_detail">특산품1</a>
+							<a href="">특산품1</a>
 						</h4>
 						<p class="card-text">도쿄에서만 판매되는 JMT 바나나빵!</p>
 					</div>

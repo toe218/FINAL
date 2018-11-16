@@ -84,10 +84,10 @@
 					</thead>
 					<tbody>
 						<form:form commandName="qna" action="qna_insert">
-							<form:hidden path="qnaNum" value="1" />
-							<form:hidden path="memberNum" value="1" />
-							<form:hidden path="staffNumber" value="1" />
-							<form:hidden path="qnaCount" value="1" />
+							<form:hidden path="qnaNum" value="2" />
+							<form:hidden path="memberNum" value="2" />
+							<form:hidden path="staffNumber" value="2" />
+							<form:hidden path="qnaCount" value="2" />
 							<tr>
 								<th>제목 :</th>
 								<td><form:input path="qnaSubject" /></td>
