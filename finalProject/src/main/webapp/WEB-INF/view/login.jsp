@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,30 +47,23 @@
 					<div class="card card-signin my-5">
 						<div class="card-body">
 							<h5 class="card-title text-center">로그인</h5>
-
+							<form:form action="login">
 							<div class="form-label-group">
-								<label for="inputId">아이디</label> <input type="email"
-									id="inputId" class="form-control" placeholder="아이디를 입력해 주세요"
-									required autofocus>
+								<label for="inputId">아이디</label> 
+								<form:input path="id" id="inputId" class="form-control" placeholder="아이디를 입력해 주세요" required autofocus />
 							</div>
-
 							<div class="form-label-group">
-								<label for="inputPassword">비밀번호</label> <input type="password"
-									id="inputPassword" class="form-control"
-									placeholder="비밀번호를 입력해 주세요" required>
+								<label for="inputPassword">비밀번호</label>
+								<form:password path="password" id="inputPassword" class="form-control"	placeholder="비밀번호를 입력해 주세요" required />
 							</div>
-
 							<div class="custom-control custom-checkbox mb-3">
-								<input type="checkbox" class="custom-control-input"
-									id="customCheck1"> <label class="custom-control-label"
-									for="customCheck1">비밀번호 기억하기</label>
+								<form:checkbox path="rememberPassword" class="custom-control-input" id="customCheck1" />
+								<label class="custom-control-label" for="customCheck1">비밀번호 기억하기</label>
 							</div>
-							<button class="btn btn-lg btn-primary btn-block text-uppercase"
-								type="submit">로그인</button>
-							<button class="btn btn-lg btn-secondary btn-block text-uppercase"
-								type="submit">회원가입</button>
-
-
+								<form:hidden path="dvice"/>
+							<input class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" value="로그인">
+							<a href="join"><input class="btn btn-lg btn-secondary btn-block text-uppercase" type="button" value="회원가입" /></a>
+						</form:form>
 						</div>
 						<div class="find_info">
 							<a target="_blank" href="#"
