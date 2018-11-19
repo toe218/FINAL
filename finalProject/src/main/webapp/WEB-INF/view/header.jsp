@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" import="command.*"%>
 <%
-	Loginsession info = (Loginsession)session.getAttribute("info");
+	LoginSession info = (LoginSession)session.getAttribute("info");
 %>
 <!DOCTYPE html>
 <html>
@@ -41,7 +41,7 @@
       </div>
     </nav>
     <% }else { %>
-<% if(info.getDvice().equals("s")) { %>
+<% if(info.getCommandDvice().equals("s")) { %>
 	<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
         <a class="navbar-brand" href="index.html">GIFTRIP 기프트립</a>
@@ -58,7 +58,7 @@
               <a class="nav-link" href="#">커뮤니티</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">로그아웃</a>
+              <a class="nav-link" href="logout">로그아웃</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">회원가입</a>
@@ -67,7 +67,7 @@
         </div>
       </div>
     </nav>
- <% }else if(info.getDvice().equals("m")) { %>   
+ <% }else if(info.getCommandDvice().equals("m")) { %>   
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
         <a class="navbar-brand" href="index.html">GIFTRIP 기프트립</a>
@@ -84,7 +84,7 @@
               <a class="nav-link" href="#">커뮤니티</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">로그아웃</a>
+              <a class="nav-link" href="logout">로그아웃</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">회원가입</a>

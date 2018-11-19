@@ -33,50 +33,45 @@
 	integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
 	crossorigin="anonymous"></script>
 
-
 <!-- Custom styles for this template -->
 <link href="http://localhost:8080/finalProject/css/scrolling-nav.css"
 	rel="stylesheet">
 
 </head>
 <body>
-	<div style="margin-top: 70px">
+	<section id="services" class="bg-light">
 		<div class="container">
-			<div class="row">
-				<div class="col-sm-5 col-md-5 col-lg-5 mx-auto">
-					<div class="card card-signin my-5">
-						<div class="card-body">
-							<h5 class="card-title text-center">로그인</h5>
-							<form:form action="login">
-							<div class="form-label-group">
-								<label for="inputId">아이디</label> 
-								<form:input path="id" id="inputId" class="form-control" placeholder="아이디를 입력해 주세요" required autofocus />
-							</div>
-							<div class="form-label-group">
-								<label for="inputPassword">비밀번호</label>
-								<form:password path="password" id="inputPassword" class="form-control"	placeholder="비밀번호를 입력해 주세요" required />
-							</div>
-							<div class="custom-control custom-checkbox mb-3">
-								<form:checkbox path="rememberPassword" class="custom-control-input" id="customCheck1" />
-								<label class="custom-control-label" for="customCheck1">비밀번호 기억하기</label>
-							</div>
-								<form:hidden path="dvice"/>
-							<input class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" value="로그인">
-							<a href="join"><input class="btn btn-lg btn-secondary btn-block text-uppercase" type="button" value="회원가입" /></a>
-						</form:form>
-						</div>
-						<div class="find_info">
-							<a target="_blank" href="#"
-								onclick="try{nclks('log.searchid',this,event)}catch(e){}">아이디
-								찾기</a> <span class="bar">|</span> <a target="_blank" href="#"
-								onclick="try{nclks('log.searchpass',this,event)}catch(e){}">비밀번호
-								찾기</a>
-						</div>
-					</div>
+			<div class="row justify-content-center">
+				<div class="col-lg-6 mx-auto">
+					<table class="table table-bordered">
+						<thead>
+							<h2>로그인</h2>
+						</thead>
+						<tbody>
+							<form:form action="login" commandName="loginSession" name="loginSession" ng-controller="MainController">
+								<tr>
+									<th><form:label path="commandId">아이디 : </form:label></th>
+									<td><form:input path="commandId" />
+									<form:hidden path="commandName" /></td>
+								</tr>
+								<tr>
+									<th><form:label path="commandPw">비밀번호</form:label></th>
+									<td><form:password path="commandPw" /><form:hidden path="commandDvice" /></td>
+								</tr>
+								<tr>
+									<th><form:label path="commandCookie">자동 로그인</form:label></th>
+									<td><form:checkbox path="commandCookie" />
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2"><input type="submit" value="등록" /> <a
+										href="join"><input type="button" value="회원가입" /></a></td>
+								</tr>
+							</form:form>
+					</table>
 				</div>
 			</div>
 		</div>
-	</div>
+	</section>
 </body>
-
 </html>
