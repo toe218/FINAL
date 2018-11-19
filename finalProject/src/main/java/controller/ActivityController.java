@@ -13,7 +13,7 @@ public class ActivityController {
 	public String activityInsertGet(Activity activity, Model model) {
 		model.addAttribute("activity", activity);
 		System.out.println("GET INSERT");
-		return "product/productinsert";
+		return "product/activity_insert";
 	}
 	@RequestMapping(value = "/activity_insert", method = RequestMethod.POST)
 	public String activityInsertPost(Activity activity, Model model) {
@@ -23,9 +23,9 @@ public class ActivityController {
 		if (result > 0) {
 			model.addAttribute("activity", activity);
 			System.out.println(activity.getActivityNum());
-			return "redirect:mainpage";
+			return "redirect:product";
 		} else {
-			return "product/productinsert";
+			return "redirect:main";
 		}
 	}
 }

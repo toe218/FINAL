@@ -55,7 +55,7 @@
               <a class="nav-link" href="intro">회사소개</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">커뮤니티</a>
+              <a class="nav-link" href="product">상품등록</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="logout">로그아웃</a>
