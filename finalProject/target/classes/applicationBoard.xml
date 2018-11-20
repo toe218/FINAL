@@ -16,5 +16,7 @@
 	<bean id="boardService" class="service.BoardService" />
 	<bean id="loginRepository" class="repository.LoginRepository" />
 	<bean id="loginService" class="service.LoginService" />
+	<bean id="categoryService" class="service.CategoryService" />
+	<bean id="categoryRepository" class="repository.CategoryRepository" />
 
 </beans>	

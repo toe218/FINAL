@@ -1,41 +1,47 @@
 package command;
 
 import java.io.Serializable;
+import java.util.Date;
+
 @SuppressWarnings("serial")
-public class Loginsession implements Serializable{
-	private String id;
-	private String password;
-	private String name;
-	private String dvice;
-	private String rememberPassword;
-	public String getRememberPassword() {
-		return rememberPassword;
+public class LoginSession implements Serializable {
+	private String commandId;
+	private String commandPw;
+	private String commandName;
+	private String commandDvice;
+	private boolean commandCookie;
+	public boolean isCommandCookie() {
+		return commandCookie;
 	}
-	public void setRememberPassword(String rememberPassword) {
-		this.rememberPassword = rememberPassword;
+
+	public void setCommandCookie(boolean commandCookie) {
+		this.commandCookie = commandCookie;
 	}
-	public String getPassword() {
-		return password;
+	public String getCommandId() {
+		return commandId;
 	}
-	public void setPassword(String password) {
-		this.password = password;
+	public void setCommandId(String commandId) {
+		this.commandId = commandId;
 	}
-	public String getId() {
-		return id;
+	public String getCommandPw() {
+		return commandPw;
 	}
-	public void setId(String id) {
-		this.id = id;
+
+	public void setCommandPw(String commandPw) {
+		this.commandPw = commandPw;
 	}
-	public String getName() {
-		return name;
+
+	public String getCommandName() {
+		return commandName;
 	}
-	public void setName(String name) {
-		this.name = name;
+
+	public void setCommandName(String commandName) {
+		this.commandName = commandName;
 	}
-	public String getDvice() {
-		return dvice;
+	public String getCommandDvice() {
+		return commandDvice;
 	}
-	public void setDvice(String dvice) {
-		this.dvice = dvice;
+	public void setCommandDvice(String commandDvice) {
+		this.commandDvice = commandDvice;
 	}
 }

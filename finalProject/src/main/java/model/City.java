@@ -5,7 +5,7 @@ import java.io.Serializable;
 public class City implements Serializable{
 	private String cityNum; // 도시번호
 	private String continentName; // 대륙이름
-	private String countryNume; // 나라번호
+	private String countryNum; // 나라번호
 	private String cityName; // 도시이름
 	public String getCityNum() {
 		return cityNum;
@@ -19,11 +19,11 @@ public class City implements Serializable{
 	public void setContinentName(String continentName) {
 		this.continentName = continentName;
 	}
-	public String getCountryNume() {
-		return countryNume;
+	public String getCountryNum() {
+		return countryNum;
 	}
-	public void setCountryNume(String countryNume) {
-		this.countryNume = countryNume;
+	public void setCountryNum(String countryNum) {
+		this.countryNum = countryNum;
 	}
 	public String getCityName() {
 		return cityName;
@@ -31,4 +31,5 @@ public class City implements Serializable{
 	public void setCityName(String cityName) {
 		this.cityName = cityName;
 	}
+	
 }
