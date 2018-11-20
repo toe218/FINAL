@@ -1,6 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8" import="model.Qna, java.util.*"%>
 
+<%
+	request.setCharacterEncoding("utf-8");
+	Qna qna = (Qna) request.getAttribute("qna");
+%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,15 +19,27 @@
 <title>qna_detail.jsp</title>
 
 <!-- Bootstrap core CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+	integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+	crossorigin="anonymous">
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+	integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+	integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+	crossorigin="anonymous"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+	integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+	crossorigin="anonymous"></script>
 
 
 <!-- Custom styles for this template -->
-<link href="http://localhost:8080/finalProject/css/scrolling-nav.css" rel="stylesheet">
+<link href="http://localhost:8080/finalProject/css/scrolling-nav.css"
+	rel="stylesheet">
 
 </head>
 
@@ -58,42 +74,51 @@
 				<div class="col-lg-8 mx-auto">
 					<table class="table table-bordered">
 						<thead>
-						<h2>질문글상세보기</h2>
+							<h2>질문글상세보기</h2>
+							<tr>
+								<th scope="col" style="width: 90px">글번호</th>
+								<td><%=qna.getQnaNum()%></td>
+								<th scope="col">작성일</th>
+								<td><%=qna.getQnaDate()%></td>
+							</tr>
 							<tr>
 								<th scope="col" style="width: 90px">글쓴이</th>
-								<td>글쓴이입니다</td>
+								<td><%=qna.getMemberNum()%></td>
 								<th scope="col">작성일</th>
-								<td>2018-11-12</td>
+								<td><%=qna.getQnaDate()%></td>
 							</tr>
 						</thead>
 						<tbody>
-							<form action="" method="post" encType="multiplart/form-data">
-								<tr>
-									<th scope="col">제목</th>
-									<td>제목입니다</td>
-									<th scope="col">조회수</th>
-									<td>조회수입니다</td>
-								</tr>
-								<tr>
-									<th rowspan="5" scope="row">내용</th>
-									<td rowspan="5" colspan="5">내용d입니다내용d입니다내용d입니다내용d입니다내용d입니다내용d입니다내용d입니다내용d입니다내용d입니다내용d입니다내용d입니다내용d입니다내용d입니다내용d입니다내용d입니다내용d입니다내용d입니다내용d입니다내용d입니다내용d입니다내용d입니다내용d입니다내용d입니다내용d입니다내용d입니다내용d입니다내용d입니다내용d입니다내용d입니다내용d입니다내용d입니다내용d입니다내용d입니다내용d입니다내용d입니다내용d입니다</td>
-								</tr>
+							<tr>
+								<th scope="col">제목</th>
+								<td><%=qna.getQnaSubject()%></td>
+								<th scope="col">조회수</th>
+								<td><%=qna.getQnaCount()%></td>
+							</tr>
+							<tr>
+								<th rowspan="5" scope="row">내용</th>
+								<td rowspan="5" colspan="5"><%=qna.getQnaContent()%></td>
+							</tr>
 						</tbody>
 						<tfoot>
 							<tr>
 								<th scope="row">첨부파일</th>
-								<td colspan="3">첨부파일입니다</td>
+								<td colspan="3"><%=qna.getQnaFile()%></td>
 							</tr>
 							<tr>
 								<th scope="row">댓글</th>
-								<td colspan="3">댓글입니다</td>
+								<td colspan="3">댓글입니다.qna에 댓글이 없습니다.</td>
 							</tr>
+							<%-- <%
+								}
+							%> --%>
 							<tr>
-								<td colspan="5" scope="row"><input type="button"
-									value="글 목록" class=" " onclick="" /></td>
+								<td colspan="5" scope="row"><a href="qna_modify"><input
+										type="button" value="글 수정" /></a> <a href="qna_delete"><input
+										type="button" value="글 삭제" /></a> <a href="qna_list"><input
+										type="button" value="글 목록" /></a></td>
 							</tr>
 						</tfoot>
-						</form>
 					</table>
 				</div>
 			</div>
@@ -123,9 +148,8 @@
 											name="content" class=""></textarea></td>
 								</tr>
 								<tr>
-									<td colspan="2"><input type="button" value="등록" onclick=""
-										class="" /> <input type="button" value="글 목록" class=" "
-										onclick="" /></td>
+									<td colspan="2"><input type="submit" value="등록" /> <a
+										href="qna_list"><input type="button" value="글 목록" /></a></td>
 								</tr>
 							</form>
 					</table>
@@ -142,19 +166,19 @@
 		<!-- /.container -->
 	</footer>
 
-<!-- 	<!-- Bootstrap core JavaScript -->
+	<!-- 	<!-- Bootstrap core JavaScript -->
 	<script
 		src="http://localhost:8080/finalProject/vendor/jquery/jquery.min.js"></script>
 	<script
 		src="http://localhost:8080/finalProject/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-	Plugin JavaScript
+	<!--  Plugin JavaScript-->
 	<script
 		src="http://localhost:8080/finalProject/vendor/jquery-easing/jquery.easing.min.js"></script>
 
-	Custom JavaScript for this theme
-	<script
-		src="http://localhost:8080/finalProject/js/scrolling-nav.js"></script> -->
+	<!--Custom JavaScript for this theme  -->
+	<script src="http://localhost:8080/finalProject/js/scrolling-nav.js"></script>
+
 </body>
 
 </html>

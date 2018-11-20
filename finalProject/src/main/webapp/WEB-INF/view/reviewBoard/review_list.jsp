@@ -72,19 +72,19 @@
 							class="list-group-item d-flex justify-content-between align-items-center">
 							여행정보게시판 <span class="badge badge-primary badge-pill">12</span>
 						</a> -->
-						<a href="#"
+						<a href="review_list"
 							class="list-group-item d-flex justify-content-between align-items-center">
 							후기게시판 <span class="badge badge-primary badge-pill">50</span>
 						</a>
-						<a href="#"
+						<a href="notice_list"
 							class="list-group-item d-flex justify-content-between align-items-center">
 							공지사항게시판 <span class="badge badge-primary badge-pill">99</span>
 						</a>
-						<a href="#"
+						<a href="qna_list"
 							class="list-group-item d-flex justify-content-between align-items-center">
 							질문게시판 <span class="badge badge-primary badge-pill">99</span>
 						</a>
-						<a href="#"
+						<a href="selfPlan_list"
 							class="list-group-item d-flex justify-content-between align-items-center">
 							자유여행플랜게시판 <span class="badge badge-primary badge-pill">99</span>
 						</a>
@@ -107,7 +107,6 @@
 					<table class="table table-hover">
 						<thead>
 							<tr>
-								<!-- ??리스트에 내용이 보이나?? -->
 								<th scope="col">글번호</th>
 								<th scope="col">글쓴이</th>
 								<th scope="col">제목</th>
@@ -159,10 +158,10 @@
 			</div>
 
 			<div class="row">
-				<div class="col justify-content-end col-lg-8 mx-auto">
+				<div class="col col-lg-12">
 					<div class="form-button">
-						<a href="review_insert"><button type="button" class="button">
-								글쓰기</button></a>
+						<a href="review_insert"><button type="button"
+								class="button float-right">글쓰기</button></a>
 					</div>
 				</div>
 			</div>
@@ -193,7 +192,7 @@
 	Custom JavaScript for this theme
 	<script
 		src="http://localhost:8080/finalProject/resources/js/scrolling-nav.js"></script> -->
-	-->
+
 
 </body>
 

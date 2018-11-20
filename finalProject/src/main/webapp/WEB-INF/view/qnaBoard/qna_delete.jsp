@@ -15,15 +15,27 @@
 <title>qna_delete.jsp</title>
 
 <!-- Bootstrap core CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+	integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+	crossorigin="anonymous">
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+	integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+	integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+	crossorigin="anonymous"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+	integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+	crossorigin="anonymous"></script>
 
 
 <!-- Custom styles for this template -->
-<link href="http://localhost:8080/finalProject/css/scrolling-nav.css" rel="stylesheet">
+<link href="http://localhost:8080/finalProject/css/scrolling-nav.css"
+	rel="stylesheet">
 
 </head>
 
@@ -55,27 +67,26 @@
 	<section id="services" class="bg-light">
 		<div class="container">
 			<div class="row">
-				<!--  <div class="col-lg-8 mx-auto">-->
-				<table class="table table-bordered">
-					<thead>
-						<h2>질문글삭제</h2>
-					</thead>
-					<tbody>
-						<form action="" method="post" encType="multiplart/form-data">
-							<tr>
-								<th>비밀번호 :</th>
-								<td><input type="password" placeholder="비밀번호를 입력하세요"
-									class="" /></td>
-							</tr>
-							<tr>
-								<td colspan="2"><input type="button" value="삭제" onclick=""
-									class="" /> <input type="button" value="글 목록" class=" "
-									onclick="" /></td>
-							</tr>
-						</form>
-				</table>
+				<div class="col-lg-8 mx-auto">
+					<table class="table table-bordered">
+						<thead>
+							<h2>질문글삭제</h2>
+						</thead>
+						<tbody>
+							<form action="qna_delete" method="post"
+								encType="multiplart/form-data">
+								<tr>
+									<th>비밀번호 :</th>
+									<td><input type="password" placeholder="비밀번호를 입력하세요" /></td>
+								</tr>
+								<tr>
+									<td colspan="2"><input type="submit" value="삭제" /> <a
+										href="qna_list"><input type="button" value="글 목록" /></a></td>
+								</tr>
+							</form>
+					</table>
+				</div>
 			</div>
-		</div>
 	</section>
 
 	<!-- Footer -->
@@ -87,19 +98,19 @@
 		<!-- /.container -->
 	</footer>
 
-<!-- 	<!-- Bootstrap core JavaScript -->
+	<!-- 	<!-- Bootstrap core JavaScript -->
 	<script
 		src="http://localhost:8080/finalProject/vendor/jquery/jquery.min.js"></script>
 	<script
 		src="http://localhost:8080/finalProject/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-	Plugin JavaScript
+	<!--  Plugin JavaScript-->
 	<script
 		src="http://localhost:8080/finalProject/vendor/jquery-easing/jquery.easing.min.js"></script>
 
-	Custom JavaScript for this theme
-	<script
-		src="http://localhost:8080/finalProject/js/scrolling-nav.js"></script> -->
+	<!--Custom JavaScript for this theme  -->
+	<script src="http://localhost:8080/finalProject/js/scrolling-nav.js"></script>
+
 
 </body>
 
