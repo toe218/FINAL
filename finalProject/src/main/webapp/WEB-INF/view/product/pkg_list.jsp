@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h2>질문게시판</h2>
+	<h2>패키지 상품</h2>
 					<table class="table table-hover">
 						<thead>
 							<tr>
