@@ -1,10 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8" import="model.Qna"%>
-
+	pageEncoding="UTF-8" import="model.Qna, java.util.*"%>
 <%
 	request.setCharacterEncoding("utf-8");
-	Qna qna = (Qna) request.getAttribute("qna");
-	System.out.println(qna);
+	List list = (List) request.getAttribute("list");
 %>
 
 <!DOCTYPE html>
@@ -57,19 +55,19 @@
 							class="list-group-item d-flex justify-content-between align-items-center">
 							여행정보게시판 <span class="badge badge-primary badge-pill">12</span>
 						</a> -->
-						<a href="#"
+						<a href="review_list"
 							class="list-group-item d-flex justify-content-between align-items-center">
 							후기게시판 <span class="badge badge-primary badge-pill">50</span>
 						</a>
-						<a href="#"
+						<a href="notice_list"
 							class="list-group-item d-flex justify-content-between align-items-center">
 							공지사항게시판 <span class="badge badge-primary badge-pill">99</span>
 						</a>
-						<a href="#"
+						<a href="qna_list"
 							class="list-group-item d-flex justify-content-between align-items-center">
 							질문게시판 <span class="badge badge-primary badge-pill">99</span>
 						</a>
-						<a href="#"
+						<a href="selfPlan_list"
 							class="list-group-item d-flex justify-content-between align-items-center">
 							자유여행플랜게시판 <span class="badge badge-primary badge-pill">99</span>
 						</a>
@@ -88,13 +86,21 @@
 							</tr>
 						</thead>
 						<tbody>
+							<%
+								for (int i = 0; i < list.size(); i++) {
+									Qna qna = (Qna) list.get(i);
+							%>
 							<tr>
 								<th scope="row"><%=qna.getQnaNum()%></th>
 								<td><%=qna.getMemberNum()%></td>
-								<td><a href="#"><%=qna.getQnaSubject()%></a></td>
+								<td><a
+									href="qna_detail?qnaSubject=<%=qna.getQnaSubject()%>"><%=qna.getQnaSubject()%></a></td>
 								<td><%=qna.getQnaDate()%></td>
 								<td><%=qna.getQnaCount()%></td>
 							</tr>
+							<%
+								}
+							%>
 						</tbody>
 					</table>
 					<div class="container">
